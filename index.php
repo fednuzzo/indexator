@@ -51,7 +51,8 @@ try {
             'basename' => $info['basename'],
             'extension' => $info['extension'],
             'filename' => $info['filename'],
-            'size' => filesize($file)
+            'size' => filesize($file),
+            'checksum' => md5_file($file)
         ];
 
         $response['files'][] = $curr;
